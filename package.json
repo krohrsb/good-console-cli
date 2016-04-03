@@ -1,6 +1,6 @@
 {
   "name": "good-console-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CLI for Good logs",
   "main": "lib/index.js",
   "scripts": {
@@ -9,11 +9,7 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "author": {
-    "name": "Kyle Brown",
-    "email": "blackbarn@gmail.com",
-    "url": "https://github.com/blackbarn"
-  },
+  "author": "Kyle Brown",
   "contributors": [],
   "bugs": {
     "url": "https://github.com/blackbarn/good-console-cli/issues",
@@ -25,7 +21,7 @@
     "url": "git@github.com:blackbarn/good-console-cli.git"
   },
   "bin": {
-      "good-console-cli": "./bin/good-console-cli"
+    "good-console-cli": "./bin/good-console-cli"
   },
   "keywords": [
     "hapi",
@@ -34,7 +30,6 @@
     "logs"
   ],
   "preferGlobal": true,
-  "author": "Kyle Brown",
   "license": "ISC",
   "dependencies": {
     "good-console": "^5.3.1",
