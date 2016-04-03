@@ -9,6 +9,21 @@
   "engines": {
     "node": ">=4.0.0"
   },
+  "author": {
+    "name": "Kyle Brown",
+    "email": "blackbarn@gmail.com",
+    "url": "https://github.com/blackbarn"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/blackbarn/good-console-cli/issues",
+    "email": "blackbarn@gmail.com"
+  },
+  "homepage": "https://github.com/blackbarn/good-console-cli",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:blackbarn/good-console-cli.git"
+  },
   "bin": {
       "good-console-cli": "./bin/good-console-cli"
   },
