@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+const argv = require('optimist')
+    .usage('Usage: $0 [[[[[--log=<tags>] --request=<tags>] --response=<tags>] --ops=<tags>] --error=<tags>]')
+    .argv;
+
+const Cli = require('../lib');
+
+Cli.parseLogs(process.stdin, process.stdout, {
+    log: argv.log && argv.log.split(','),
+    request: argv.request && argv.request.split(','),
+    response: argv.response && argv.response.split(','),
+    ops: argv.ops && argv.ops.split(','),
+    error: argv.error && argv.error.split(',')
+});
