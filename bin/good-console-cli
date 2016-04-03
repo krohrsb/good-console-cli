@@ -1,15 +1,23 @@
 #!/usr/bin/env node
 
-const argv = require('optimist')
-    .usage('Usage: $0 [[[[[--log=<tags>] --request=<tags>] --response=<tags>] --ops=<tags>] --error=<tags>]')
-    .argv;
+const opts = require('optimist')
+    .usage('Usage: stream | $0 [[[[[--log=<tags>] --request=<tags>] --response=<tags>] --ops=<tags>] --error=<tags>]');
+
+const argv = opts.argv;
 
 const Cli = require('../lib');
 
+if (process.stdin.isTTY) {
+    console.log(opts.help());
+    process.exit(1);
+}
+
+
+
 Cli.parseLogs(process.stdin, process.stdout, {
-    log: argv.log && argv.log.split(','),
-    request: argv.request && argv.request.split(','),
-    response: argv.response && argv.response.split(','),
-    ops: argv.ops && argv.ops.split(','),
-    error: argv.error && argv.error.split(',')
+    log: Cli.parseEvent(argv.log),
+    request: Cli.parseEvent(argv.request),
+    response: Cli.parseEvent(argv.response),
+    ops: Cli.parseEvent(argv.ops),
+    error: Cli.parseEvent(argv.error),
 });

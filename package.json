@@ -18,6 +18,7 @@
     "cli",
     "logs"
   ],
+  "preferGlobal": true,
   "author": "Kyle Brown",
   "license": "ISC",
   "dependencies": {
